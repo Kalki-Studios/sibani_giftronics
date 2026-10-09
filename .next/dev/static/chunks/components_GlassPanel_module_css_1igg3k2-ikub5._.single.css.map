@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/components/GlassPanel.module.css"],"sourcesContent":[".glassPanel {\n  background: var(--spatial-glass);\n  backdrop-filter: blur(24px);\n  -webkit-backdrop-filter: blur(24px);\n  border: 1px solid var(--spatial-edge);\n  box-shadow: var(--shadow-float);\n  border-radius: 24px;\n  padding: 24px;\n}\n"],"names":[],"mappings":"AAAA"}}]
-}
