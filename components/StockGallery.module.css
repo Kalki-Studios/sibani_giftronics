@@ -1,0 +1,66 @@
+.gallerySection {
+  padding: 60px 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.galleryScroll {
+  display: flex;
+  gap: 24px;
+  padding: 40px 5vw;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+.galleryScroll::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.stockCard {
+  min-width: 320px;
+  height: 420px;
+  scroll-snap-align: center;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: linear-gradient(180deg, var(--spatial-glass) 0%, rgba(255,255,255,0.85) 100%);
+  position: relative;
+  overflow: hidden;
+  padding: 0 !important;
+  text-decoration: none;
+}
+
+.stockCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 60px -20px rgba(0,0,0,0.1), 0 0 0 1px rgba(255,255,255,0.8) inset;
+}
+
+.cardImageContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.cardContent {
+  padding: 24px;
+  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%);
+  width: 100%;
+  z-index: 1;
+}
+
+.cardTitle {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.cardDesc {
+  color: var(--text-secondary);
+}

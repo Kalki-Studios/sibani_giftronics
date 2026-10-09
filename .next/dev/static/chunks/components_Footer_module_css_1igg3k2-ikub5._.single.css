@@ -1,0 +1,63 @@
+/* [project]/components/Footer.module.css [app-client] (css) */
+.Footer-module__EZoWya__footer {
+  background: var(--accent-navy);
+  color: #fff;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  margin-top: 60px;
+  padding: 80px 24px 40px;
+  display: flex;
+}
+
+.Footer-module__EZoWya__footerGrid {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+  width: 100%;
+  max-width: 1000px;
+  display: grid;
+}
+
+.Footer-module__EZoWya__footerCol {
+  flex-direction: column;
+  gap: 16px;
+  display: flex;
+}
+
+.Footer-module__EZoWya__logoName {
+  letter-spacing: -.02em;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.Footer-module__EZoWya__infoText {
+  color: #ffffffb3;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.Footer-module__EZoWya__link {
+  color: #ffffffe6;
+  text-underline-offset: 4px;
+  font-size: 15px;
+  -webkit-text-decoration: underline #fff3;
+  text-decoration: underline #fff3;
+  transition: color .2s, text-decoration-color .2s;
+}
+
+.Footer-module__EZoWya__link:hover {
+  color: #fff;
+  text-decoration-color: #fff;
+}
+
+.Footer-module__EZoWya__copyright {
+  text-align: center;
+  color: #ffffff80;
+  border-top: 1px solid #ffffff1a;
+  width: 100%;
+  max-width: 1000px;
+  padding-top: 24px;
+  font-size: 14px;
+}
+
+/*# sourceMappingURL=components_Footer_module_css_1igg3k2-ikub5._.single.css.map*/

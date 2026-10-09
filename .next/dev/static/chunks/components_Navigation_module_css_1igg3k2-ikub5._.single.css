@@ -1,0 +1,70 @@
+/* [project]/components/Navigation.module.css [app-client] (css) */
+.Navigation-module__Pj2Xoq__navWrapper {
+  z-index: 100;
+  pointer-events: none;
+  justify-content: center;
+  padding: 0 16px;
+  display: flex;
+  position: sticky;
+  top: 24px;
+}
+
+.Navigation-module__Pj2Xoq__navPanel {
+  pointer-events: auto;
+  border-radius: 999px;
+  align-items: center;
+  gap: 32px;
+  padding: 8px 16px 8px 24px;
+  display: flex;
+}
+
+.Navigation-module__Pj2Xoq__logo {
+  letter-spacing: -.02em;
+  color: var(--accent-navy);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.Navigation-module__Pj2Xoq__links {
+  color: var(--text-secondary);
+  gap: 24px;
+  font-size: 15px;
+  font-weight: 500;
+  display: flex;
+}
+
+.Navigation-module__Pj2Xoq__links a {
+  transition: color .2s;
+}
+
+.Navigation-module__Pj2Xoq__links a:hover {
+  color: var(--text-primary);
+}
+
+.Navigation-module__Pj2Xoq__callButton {
+  background: var(--accent-orange);
+  color: #fff;
+  border-radius: 999px;
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: transform .1s, box-shadow .2s;
+  box-shadow: inset 0 -2px #0000001a, 0 4px 12px #f9731640;
+}
+
+.Navigation-module__Pj2Xoq__callButton:hover {
+  box-shadow: inset 0 -2px #0000001a, 0 6px 16px #f9731659;
+}
+
+.Navigation-module__Pj2Xoq__callButton:active {
+  transform: translateY(1px);
+  box-shadow: inset 0 1px 2px #0003, 0 2px 4px #f9731633;
+}
+
+@media (max-width: 640px) {
+  .Navigation-module__Pj2Xoq__links {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=components_Navigation_module_css_1igg3k2-ikub5._.single.css.map*/

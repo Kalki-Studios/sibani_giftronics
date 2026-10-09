@@ -1,0 +1,97 @@
+.pageContainer {
+  padding: 120px 24px 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+}
+
+.header {
+  text-align: center;
+}
+
+.title {
+  font-size: clamp(32px, 6vw, 64px);
+  line-height: 1.1;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+.description {
+  font-size: 20px;
+  color: var(--text-secondary);
+}
+
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+  width: 100%;
+}
+
+.productCard {
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  overflow: hidden;
+  padding: 0 !important;
+  background: linear-gradient(180deg, var(--spatial-glass) 0%, rgba(255,255,255,0.85) 100%);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s;
+}
+
+.productCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 60px -20px rgba(0,0,0,0.1), 0 0 0 1px rgba(255,255,255,0.8) inset;
+}
+
+.imageContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.cardContent {
+  padding: 24px;
+  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%);
+  width: 100%;
+  z-index: 1;
+}
+
+.productName {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.productPrice {
+  font-size: 18px;
+  color: var(--accent-orange);
+  font-weight: 600;
+}
+
+.backButton {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 24px;
+  background: rgba(0,0,0,0.05);
+  border-radius: 999px;
+  color: var(--text-primary);
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s;
+  margin-bottom: 24px;
+}
+
+.backButton:hover {
+  background: rgba(0,0,0,0.1);
+}

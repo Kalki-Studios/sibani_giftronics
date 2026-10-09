@@ -1,0 +1,68 @@
+/* app/globals.css */
+:root {
+  --spatial-canvas: #F5F5F7;
+  --spatial-glass: rgba(255, 255, 255, 0.65);
+  --spatial-edge: rgba(255, 255, 255, 0.8);
+  --text-primary: #1D1D1F;
+  --text-secondary: #86868B;
+  --accent-orange: #F97316;
+  --accent-navy: #0A192F;
+  --shadow-float: 0 20px 40px -15px rgba(0,0,0,0.05), 0 0 0 1px rgba(255,255,255,0.5) inset;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--spatial-canvas);
+  color: var(--text-primary);
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Background orbs for spatial depth */
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  filter: blur(120px);
+  z-index: -1;
+  opacity: 0.12;
+  pointer-events: none;
+}
+
+body::before {
+  background: var(--accent-orange);
+  top: -100px;
+  left: -200px;
+}
+
+body::after {
+  background: #3B82F6; /* Pale blue */
+  bottom: -100px;
+  right: -200px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+/* Base focus styles */
+:focus-visible {
+  outline: 2px solid var(--accent-orange);
+  outline-offset: 2px;
+}

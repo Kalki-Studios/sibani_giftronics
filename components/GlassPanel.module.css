@@ -1,0 +1,9 @@
+.glassPanel {
+  background: var(--spatial-glass);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid var(--spatial-edge);
+  box-shadow: var(--shadow-float);
+  border-radius: 24px;
+  padding: 24px;
+}

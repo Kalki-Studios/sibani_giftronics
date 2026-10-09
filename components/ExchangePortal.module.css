@@ -1,0 +1,100 @@
+.exchangeSection {
+  padding: 80px 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.portalCard {
+  width: 100%;
+  max-width: 900px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 40px;
+  background: var(--spatial-glass);
+}
+
+.leftSide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+
+.desc {
+  color: var(--text-secondary);
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.formArea {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.inputGroup label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.input {
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--spatial-edge);
+  background: rgba(255, 255, 255, 0.8);
+  font-size: 16px;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
+  outline: none;
+  transition: box-shadow 0.2s, border-color 0.2s;
+  color: var(--text-primary);
+}
+
+.input:focus {
+  border-color: var(--accent-orange);
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.02), 0 0 0 3px rgba(249, 115, 22, 0.2);
+}
+
+.submitBtn {
+  margin-top: 10px;
+  background: var(--text-primary);
+  color: white;
+  padding: 16px;
+  border-radius: 12px;
+  font-weight: 600;
+  text-align: center;
+  transition: transform 0.1s, box-shadow 0.2s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.submitBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.submitBtn:active {
+  transform: translateY(1px);
+}
+
+@media (max-width: 768px) {
+  .portalCard {
+    grid-template-columns: 1fr;
+    padding: 24px;
+  }
+}
