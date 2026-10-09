@@ -1,9 +1,52 @@
+"use client";
+
+import { useEffect, useRef } from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import GlassPanel from '@/components/GlassPanel';
 import styles from './finance.module.css';
 
 export default function Finance() {
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+
+    let animationId: number;
+    let isInteracting = false;
+
+    const scroll = () => {
+      if (!isInteracting) {
+        el.scrollLeft += 1;
+        if (el.scrollLeft >= el.scrollWidth / 2) {
+          el.scrollLeft -= el.scrollWidth / 2;
+        }
+      }
+      animationId = requestAnimationFrame(scroll);
+    };
+
+    animationId = requestAnimationFrame(scroll);
+
+    const pause = () => { isInteracting = true; };
+    const play = () => { isInteracting = false; };
+
+    el.addEventListener('mouseenter', pause);
+    el.addEventListener('mouseleave', play);
+    el.addEventListener('touchstart', pause, { passive: true });
+    el.addEventListener('touchend', play, { passive: true });
+    el.addEventListener('touchmove', pause, { passive: true });
+
+    return () => {
+      cancelAnimationFrame(animationId);
+      el.removeEventListener('mouseenter', pause);
+      el.removeEventListener('mouseleave', play);
+      el.removeEventListener('touchstart', pause);
+      el.removeEventListener('touchend', play);
+      el.removeEventListener('touchmove', pause);
+    };
+  }, []);
+
   return (
     <main>
       <Navigation />
@@ -15,7 +58,7 @@ export default function Finance() {
           No hidden charges, instant approval, and zero downpayment on select models.
         </p>
 
-        <div className={styles.marqueeContainer}>
+        <div className={styles.marqueeContainer} ref={scrollRef}>
           <div className={styles.marqueeTrack}>
             {[...Array(2)].map((_, i) => (
               <div key={i} className={styles.marqueeGroup} aria-hidden={i === 1 ? 'true' : 'false'}>
