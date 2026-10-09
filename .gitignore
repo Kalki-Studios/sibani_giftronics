@@ -35,3 +35,12 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# personal & internal documents
+SIBANI_GIFTRONICS_ANTIGRAVITY_BRIEF.md
+AGENTS.md
+.agents/
+
+# private docs
+SIBANI_GIFTRONICS_ANTIGRAVITY_BRIEF.md
+AGENTS.md
